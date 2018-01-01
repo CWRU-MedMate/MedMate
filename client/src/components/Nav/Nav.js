@@ -1,7 +1,7 @@
 import React from 'react';
 import "./nav.css";
 
-export const Nav = () =>
+const Nav = () =>
     <ul className="nav nav-tabs">
         <li className="nav-item">
             <a className="nav-link" href="test.com">Home</a>
@@ -16,3 +16,5 @@ export const Nav = () =>
             <a className="nav-link" href="test.com">My Vitals</a>
         </li>
     </ul>
+
+export default Nav;    
