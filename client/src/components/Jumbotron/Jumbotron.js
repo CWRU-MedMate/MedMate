@@ -1,11 +1,10 @@
 import React from 'react';
 import "./jumbotron.css";
-
 import logo2 from './redcheck.png';
 import Login from './Modals/Login';
 import Signup from './Modals/Signup';
 
-export const Jumbotron = () => {
+const Jumbotron = () => {
 return(
     <div>
         <div className="jumbotron" id="jumboMain">
@@ -24,7 +23,7 @@ return(
 };
 
 
-
+export default Jumbotron;
 
 
 
