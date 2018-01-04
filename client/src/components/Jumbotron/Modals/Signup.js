@@ -8,7 +8,7 @@ return (
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
-          <span> <h5 className="modal-title">Login <img src={logo} height="25" width="25" alt=""/></h5></span>
+          <span> <h5 className="modal-title">Signup <img src={logo} height="25" width="25" alt=""/></h5></span>
             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
