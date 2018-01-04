@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, {Component} from 'react';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Container from '../components/Grid/Container';
 import Row from '../components/Grid/Row';
 import Col from '../components/Grid/Col';
@@ -11,9 +11,15 @@ import Mymeds from './Main/Main-meds';
 import Vitals from './Main/Main-vitals';
 
 
-const Main = () =>{
-  return(
+class Main extends React.Component{
+  
+  
+  render(){
+    return(
+      <Router>
   <div>
+  
+      
     <Header />    
         <Container cont='container-fluid'>
             <Row>
@@ -21,22 +27,23 @@ const Main = () =>{
                 <Nav />
               </Col>
               <Col colSize='col-lg-9'>
-              <Router>
+            
                 <Switch>
-                    <Route component={this.Main} path="/main">
                       <Route path="/dashboard" component={Dashboard} />
                       <Route path="/add" component={Addmed} />
                       <Route path="/mymeds" component={Mymeds} />
                       <Route path="/vitals" component={Vitals} />
-                    </Route>  
                 </Switch>
-              </Router>   
+                
               </Col>  
             </Row>
-        </Container>    
+        </Container>
+             
     </div>
-  )    
-}
+    </Router>
+    )
+  }
+};
 
 
 

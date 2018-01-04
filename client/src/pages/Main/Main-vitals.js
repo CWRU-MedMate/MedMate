@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Vitals = () => {
-    return (
-        <h1>Test Text vitals</h1>
-    )
-}
+class Vitals extends React.Component{
 
+    render(){ 
+         return (
+             <h1>Testing Vitals</h1>
+         )
+     } 
+ }
+ 
 export default Vitals;

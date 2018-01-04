@@ -1,5 +1,5 @@
 import logo from './cross.png';
-import axios from 'axios'
+import axios from 'axios';
 import React, { Component } from 'react';
 
 class Signup extends React.Component {
@@ -9,7 +9,7 @@ submitNewUser = () => {
 }
 
 render (){
-  return
+  return (
     <div>
       <div className="modal fade" id="signup" tabindex="-1" role="dialog" aria-hidden="true">
         <div className="modal-dialog" role="document">
@@ -47,7 +47,8 @@ render (){
           </div>
         </div>
       </div> 
-    </div>  
+    </div>
+  )
   };
 };
 

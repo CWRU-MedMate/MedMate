@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Dashboard = () => {
-    return (
-    
-        <h1>Test Text dashboard</h1>
-    )
-}
+class Dashboard extends React.Component{
+
+    render(){ 
+         return (
+             <h1>Testing dashboard</h1>
+         )
+     } 
+ }
+ 
 
 export default Dashboard;

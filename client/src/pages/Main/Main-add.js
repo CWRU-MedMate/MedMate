@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Addmed = () => {
-    return (
-        <h1>Test addmed</h1>
-    )
+class Addmed extends React.Component{
+
+   render(){ 
+        return (
+            <h1>Testing addmed</h1>
+        )
+    } 
 }
 
 export default Addmed;
