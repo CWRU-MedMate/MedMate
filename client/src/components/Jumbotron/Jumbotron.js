@@ -7,9 +7,9 @@ import Signup from './Modals/Signup';
 const Jumbotron = () => {
 return(
     <div>
-        <div className="jumbotron" id="jumboMain">
+        <div className="jumbotron" id="jumboHome">
             <div className="container-fluid">
-            <h1 id="heading">MedMate <img src={logo2} alt="" height="200" width="150"/></h1> 
+            <h1 id="heading">MedMate <img id="logoHome" src={logo2} alt="" height="200" width="150"/></h1> 
             <h4 id="subheading">We remember so you don't have to!</h4>
             <button type="button" className="btn btn-outline-light btn-home" data-toggle="modal" data-target="#login">Login</button> 
             <button type="button" className="btn btn-outline-light btn-home" data-toggle="modal" data-target="#signup">Sign up</button>
