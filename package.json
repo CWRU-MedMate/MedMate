@@ -12,7 +12,9 @@
     "passport": "^0.4.0",
     "sequelize": "^4.28.6"
   },
-  "devDependencies": {},
+  "devDependencies": {"concurrently": "^3.5.0",
+   "nodemon": "^1.11.0"
+  },
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
