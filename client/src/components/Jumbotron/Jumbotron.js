@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Component } from "react";
 import "./jumbotron.css";
 import logo2 from './redcheck.png';
 import Login from './Modals/Login';
 import Signup from './Modals/Signup';
 
-const Jumbotron = () => {
+
+class Jumbotron extends React.Component {
+  render() {
 return(
     <div>
         <div className="jumbotron" id="jumboHome">
@@ -19,7 +21,7 @@ return(
         <Signup />
     </div>
 );
-
+  };
 };
 
 

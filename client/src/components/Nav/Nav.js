@@ -5,8 +5,11 @@ import "./nav.css";
 const Nav = () =>{
     return(
         <ul className="nav nav-pills flex-column sidebar" role="tablist">
+             <li className="nav-item">
+            <Link className="nav-link active" to="/home" data-toggle="pill">Home</Link>
+            </li>
             <li className="nav-item">
-            <Link className="nav-link active" to="/dashboard" data-toggle="pill">Dashboard</Link>
+            <Link className="nav-link" to="/dashboard" data-toggle="pill">Dashboard</Link>
             </li>
             <li className="nav-item">
             <Link className="nav-link" to="/add" data-toggle="pill">Add Medication</Link>

@@ -1,10 +1,10 @@
-import React from 'react';
-import Jumbotron from '../components/Jumbotron/Jumbotron';
+import React, { Component } from "react";
+import Jumbotron from "../components/Jumbotron/Jumbotron";
 
-const Home = () =>{
-   return ( 
-    <Jumbotron />
-   );
-};
+class Home extends React.Component {
+  render() {
+    return <Jumbotron />;
+  }
+}
 
 export default Home;

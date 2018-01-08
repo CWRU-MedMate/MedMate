@@ -9,7 +9,8 @@ import Dashboard from './Main/Main-dashboard';
 import Addmed from './Main/Main-add';
 import Mymeds from './Main/Main-meds';
 import Vitals from './Main/Main-vitals';
-
+import Home from './Home';
+import Login from '../components/Jumbotron/Modals/Login';
 
 class Main extends React.Component{
   
@@ -29,6 +30,7 @@ class Main extends React.Component{
               <Col colSize='col-lg-9'>
             
                 <Switch>
+                      <Route path="/home" component={Login} />
                       <Route path="/dashboard" component={Dashboard} />
                       <Route path="/add" component={Addmed} />
                       <Route path="/mymeds" component={Mymeds} />

@@ -5,6 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
+var cors = require("cors");
 var bodyParser = require("body-parser");
 var passport = require("passport");
 var session = require("express-session");
@@ -22,6 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(cors());
 
 // For Passport
  
@@ -42,6 +44,7 @@ app.use(express.static("public"));
 require("./routes/html-routes.js")(app);
 require("./routes/user-api-routes.js")(app);
 require("./routes/meds-api-routes.js")(app);
+//require("./routes/events-api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

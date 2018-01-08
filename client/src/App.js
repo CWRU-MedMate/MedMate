@@ -1,27 +1,34 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, HashRouter } from 'react-router-dom';
-import Home from './pages/Home';
-import Main from './pages/Main';
+import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  HashRouter
+} from "react-router-dom";
+import LoginSignup from "./pages/LoginSignup";
+import Main from "./pages/Main";
 
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { userIsLoggedIn: false };
+    this.login = this.login.bind(this);
+  }
 
+  login = password => {
+    // verify pw
+    console.log(password);
+    this.setState({ userIsLoggedIn: true });
+  };
 
-const App = () =>
+  render() {
+    return (
+      <div>
+        {!this.state.userIsLoggedIn && <LoginSignup login={this.login} />}
+        {this.state.userIsLoggedIn && <Main />}
+      </div>
+    );
+  }
   
-  
-    //  <Router>
-    //    <div>
-    //     <Switch>
-    //       <Route exact path="/" component={Home} />
-    //       <Route exact path="/home" component={Home} />
-    //       <Route exact path="/main" component={Main}/>
-    //     </Switch>
-    //    </div>   
-    //   </Router>   
-    
-    <div>
-      <Main/>
-    </div>
-  
-
-
+}
 export default App;
