@@ -23,12 +23,12 @@ module.exports = function(sequelize, DataTypes){
       allowNull: false
     },
     hr_interval: {
-      type: DataTypes.TIME
+     type: DataTypes.TIME
     },
     start_time: {
-      type: DataTypes.TIME,
+     type: DataTypes.TIME,
       allowNull: false,
-      defaultValue: 080000
+     defaultValue: 080000
     },
     start_date: {
       type: DataTypes.DATE,

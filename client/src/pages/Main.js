@@ -30,7 +30,6 @@ class Main extends React.Component{
               <Col colSize='col-lg-9'>
             
                 <Switch>
-                      <Route path="/home" component={Login} />
                       <Route path="/dashboard" component={Dashboard} />
                       <Route path="/add" component={Addmed} />
                       <Route path="/mymeds" component={Mymeds} />

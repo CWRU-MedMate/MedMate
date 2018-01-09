@@ -6,19 +6,19 @@ const Nav = () =>{
     return(
         <ul className="nav nav-pills flex-column sidebar" role="tablist">
              <li className="nav-item">
-            <Link className="nav-link active" to="/home" data-toggle="pill">Home</Link>
+            <Link className="nav-link active" to="/home" >Home</Link>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="/dashboard" data-toggle="pill">Dashboard</Link>
+            <Link className="nav-link" to="/dashboard" >Dashboard</Link>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="/add" data-toggle="pill">Add Medication</Link>
+            <Link className="nav-link" to="/add" >Add Medication</Link>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="/mymeds" data-toggle="pill">My Medication</Link>
+            <Link className="nav-link" to="/mymeds" >My Medication</Link>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="/vitals" data-toggle="pill">My Vitals</Link>
+            <Link className="nav-link" to="/vitals" >My Vitals</Link>
             </li>
         </ul>
     );

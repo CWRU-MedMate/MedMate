@@ -39,7 +39,7 @@ module.exports = function(app) {
 
   app.post("/api/meds", function(req, res) {
     console.log("req.body.innerMed: " + JSON.stringify(req.body));
-    db.Meds.create(req.body.innerMed).then(function(result) {
+    db.Meds.create(req.body).then(function(result) {
       var newMedID = result.id;
       console.log("newMedID: " + newMedID);
       for(var i = 0; i < req.body.events.length; i++){

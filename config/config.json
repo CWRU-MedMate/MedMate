@@ -1,9 +1,15 @@
 {
+<<<<<<< HEAD
+    "development": {
+      "username": "root",
+      "password": "soccer15",
+=======
   "development": {
     "apiBaseUrl": "http://localhost:8080",
     "db": {
       "username": "root",
       "password": "soccer15",
+>>>>>>> 0d500b159614aa5ff30f5c644139cb5c3d893596
       "database": "med_mate_db",
       "host": "127.0.0.1",
       "dialect": "mysql",
