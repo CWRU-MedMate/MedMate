@@ -44,7 +44,16 @@ app.use(express.static("public"));
 require("./routes/html-routes.js")(app);
 require("./routes/user-api-routes.js")(app);
 require("./routes/meds-api-routes.js")(app);
+require("./routes/auth-routes.js")(app, passport);
 //require("./routes/events-api-routes.js")(app);
+
+//models
+
+var models = require("./models");
+console.log("derp", models);
+//load passport strategy
+
+require("./config/passport/passport")(passport, models.User);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
