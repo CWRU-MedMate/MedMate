@@ -15,7 +15,7 @@ module.exports = function(app, passport) {
         }); 
     });
     app.get('/api/isloggedin', function(req, res){
-        console.log("please work", req.isAuthenticated);
+        console.log("please work", req.isAuthenticated());
         if(req.isAuthenticated()){
             return res.json({authenticated: true});
         }else{
