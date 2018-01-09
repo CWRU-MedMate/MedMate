@@ -17,7 +17,7 @@ class LoginSignup extends React.Component {
                 </div> 
             </div>
             <Login login={this.props.login}/>
-            <Signup />
+            <Signup login={this.props.login}/>
         </div>
     );
   }

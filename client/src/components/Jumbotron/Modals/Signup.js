@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import TextInput from "../../Input/TextInput";
 
+
 class Signup extends React.Component {
   constructor(props) {
     super(props);
@@ -19,13 +20,18 @@ class Signup extends React.Component {
   }
 
   submitNewUser = () => {
-    console.log("submitting new user");
-    axios.post("http://localhost:8080/api/users", {
+    axios.post("http://localhost:8080/api/signup", {
       user_name: this.state.signUpForm.nameSignup,
       login_name: this.state.signUpForm.loginNameSignup,
+      email_address: this.state.signUpForm.emailSignup,
       password: this.state.signUpForm.passwordSignup,
-    }).then((response)=>{
-      console.log(response);
+    }).then((response)=>{  
+      if(response.data.success){
+       // this.props.login();
+       axios.get("http://localhost:8080/api/isloggedin").then((response)=>{
+        console.log(response.data);
+       });
+      }
     });
   };
 
@@ -66,23 +72,23 @@ class Signup extends React.Component {
               <div className="modal-body">
                 <form>
                   <div className="form-group">
-                    <label htmlFor="usernameSignup">Name</label>
+                    <label htmlFor="nameSignup">Name</label>
                     <TextInput htmlId="nameSignup" inputChange={this.inputChange}/>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="passwordSignup">Login Name</label>
+                    <label htmlFor="loginNameSignup">Login Name</label>
                     <TextInput htmlId="loginNameSignup" inputChange={this.inputChange}/>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="emailSignup">Email</label>
                     <TextInput htmlId="emailSignup" inputChange={this.inputChange}/>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="phone">Password</label>
+                    <label htmlFor="passwordSignup">Password</label>
                     <TextInput htmlId="passwordSignup" inputChange={this.inputChange}/>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="phone">Confirm Password</label>
+                    <label htmlFor="passwordConfirmationSignup">Confirm Password</label>
                     <TextInput htmlId="passwordConfirmationSignup" inputChange={this.inputChange}/>
                   </div>
                 </form>
@@ -92,6 +98,7 @@ class Signup extends React.Component {
                   type="button"
                   className="btn btn-outline-primary btn-modal"
                   onClick={this.submitNewUser}
+                  data-dismiss="modal"
                 >
                   Signup
                 </button>

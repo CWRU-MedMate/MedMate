@@ -1,26 +1,41 @@
 {
+<<<<<<< HEAD
     "development": {
-      "username": "guest",
-      "password": "test",
+      "username": "root",
+      "password": "soccer15",
+=======
+  "development": {
+    "apiBaseUrl": "http://localhost:8080",
+    "db": {
+      "username": "root",
+      "password": "soccer15",
+>>>>>>> 0d500b159614aa5ff30f5c644139cb5c3d893596
       "database": "med_mate_db",
       "host": "127.0.0.1",
       "dialect": "mysql",
       "operatorsAliases": false
-    },
-    "test": {
+    }
+  },
+  "test": {
+    "apiBaseUrl": "http://localhost:8080",
+    "db": {
       "username": "root",
       "password": "",
       "database": "database_test",
       "host": "127.0.0.1",
       "dialect": "mysql"
-    },
-    "production": {
+    }
+  },
+  "production": {
+    "apiBaseUrl": "http://localhost:8080",
+    "db": {
       "username": "pplb77f7y3n6odf3",
       "password": "ejupoi2atc3xufo8",
       "database": "u8pnens8aaruzd5p",
       "host": " tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "dialect": "mysql",
-      "use_env_variable": "mysql://pplb77f7y3n6odf3:ejupoi2atc3xufo8@tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/u8pnens8aaruzd5p"
+      "use_env_variable":
+        "mysql://pplb77f7y3n6odf3:ejupoi2atc3xufo8@tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/u8pnens8aaruzd5p"
     }
   }
-  
+}
