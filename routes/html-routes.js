@@ -12,4 +12,20 @@ module.exports = function(app) {
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
+ // app.get("/", function(req, res) {
+ //   res.sendFile(path.join(__dirname, "../client/src/components/Login/Login.js"));
+ // });
+
+ // app.get("/med-manager", function(req, res) {
+ //   res.sendFile(path.join(__dirname, "../public/med-manager.html"));
+  //});
+
+ // app.get("/med-list", function(req, res) {
+   // res.sendFile(path.join(__dirname, "../public/med-list.html"));
+ // });
+
+ // app.get("/users", function(req, res) {
+   // res.sendFile(path.join(__dirname, "../public/user-manager.html"));
+  //});
+
 };
